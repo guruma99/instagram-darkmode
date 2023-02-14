@@ -35,7 +35,7 @@ a {
   border: 1px solid rgb(219, 219, 219);
   text-align: center;
   background-color: rgb(255,255,255);
-  padding: 30px;
+  padding: 30px 30px 10px 30px;
   margin: 0 auto;
 }
 
@@ -45,39 +45,41 @@ a {
 
 }
 
-.login-box input {
-  /* position: relative;
-  top: auto;
-  left: auto;
-  z-index: 1; */
+.id-input, .pw-input {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(250, 250 , 250);
+  /* background-color: rgba(172, 172, 172, 0.651); */
+  width: 260px;
+  height: 35px;
+  margin-top: 5px;
+  z-index: 0;
+}
+
+#id, #password {
+  position: absolute;
+  z-index: 1; 
+  top: 0;
+  left: 0;
   width: 260px;
   height: 35px;
   border: 1px solid rgb(219, 219, 219);
-  /* background-color: rgb(250, 250 , 250); */
   background-color: transparent;
-  
+  padding-left: 10px;
+  font-size: 15px;
 }
 
-/* #id {
-  margin-top: 30px;
-} */
-
-/* #password {} */
-
 .login-text {
-  display: block;
-  position: relative;
-  top: 30px;
-  left: 14px;
-  width: 260px;
-  height: 35px;
-  /* background-color: rgb(250, 250 , 250); */
-  /* background-color: #999; */
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 10px;
   line-height: 35px;
   text-align: left;
-  font-size : 14px;
+  font-size : 12px;
   color: #999;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .password-wran {
@@ -95,6 +97,8 @@ a {
   padding: 8px 110px;
   border-radius: 10px;
   background-color: rgb(0, 149, 246);
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 .line-box {
@@ -109,14 +113,22 @@ a {
 }
 
 .line-box>p {
-  font-size: 14px;
+  font-size: 13px;
   padding: 20px;
+  color: #999;
+  font-weight: 700;
 }
 
 .facebook {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
   text-align: center;
   font-size: 13px;
+  font-weight: 700;
+  color:rgb(58, 115, 153);
 }
+
 
 .facebook>span>img {
   width: 17px;
@@ -126,7 +138,7 @@ a {
 
 .get_password {
   display: block;
-  margin-top: 20px;
+  margin-top: 35px;
   font-size: 12px;
 }
 
@@ -149,6 +161,10 @@ a {
 
 .download-box {
   margin-bottom: 50px;
+}
+
+.download-box p {
+  font-size: 14px;
 }
 
 .download-img {
