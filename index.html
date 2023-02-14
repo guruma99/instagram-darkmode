@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>instagram</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -17,14 +18,15 @@
 
         <div class="id-input">
           <input id="id" type="text">
-          <span class="login-text">전화번호,사용자 이름 또는 이메일</span>
+          <span class="login-text login-text-id">전화번호,사용자 이름 또는 이메일</span>
         </div>
 
         <div class="pw-input">
           <input id="password" type="password">
-          <span class="login-text">비밀번호</span>
+          <span class="login-text login-text-pw">비밀번호</span>
+          <span class="password-wran on">비밀번호 표시</span>
+          <span class="password-wran">숨기기</span>
         </div>
-        <!-- <span class="password-wran">비밀번호 표시</span> -->
 
         <button type ="button" class="login-btn">로그인</button>
 
@@ -47,8 +49,12 @@
       <div class="download-box">
         <p>앱을 다운로드하세요.</p>
         <div class="download-img">
-          <a href=""><img src="./img/app-store.png" alt="앱스토어"></a>
-          <a href=""><img src="./img/gg-play.png" alt="구글플레이"></a>
+          <a href="">
+            <img src="./img/app-store.png" alt="앱스토어">
+          </a>
+          <a href="">
+            <img src="./img/gg-play.png" alt="구글플레이">
+          </a>
         </div>
       </div>
     </main>
