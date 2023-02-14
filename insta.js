@@ -5,6 +5,8 @@
 let id = $("#id");
 let pw = $("#password");
 let pwtext = $(".password-wran");
+console.log(pwtext.text());
+
 
 id.on("input", function(){
   if(id.val()){
@@ -28,7 +30,7 @@ pw.on("input", function(){
     pw.css("padding-top", "0px");
     $(".login-text-pw").css("top", "7px");
     $(".login-text-pw").css("font-size", "12px");
-    pwtext.css("display", "none");
+    pwtext.removeClass('on');
   }
 });
 
@@ -39,9 +41,18 @@ pw.on("input", function(){
 // 만약 .password-wran을 다시 눌렀을 때 toggle.
 
 pwtext.on("click", function(){
-  if(pw.val()){
+  // if(pwtext.hasClass('on')){
+  //   pwtext.html("숨기기");
+  // }
+  // else if(pwtext.text() == "숨기기"){
+  //   pwtext.html("비밀번호 표시");
+  // }
+
+  if (pwtext.text() == "비밀번호 표시") {
     pwtext.html("숨기기");
+    pw.attr('type', 'text');
   } else {
-    pwtext.css("display", "none");
+    pwtext.html("비밀번호 표시");
+    pw.attr('type', 'password');
   }
 });
